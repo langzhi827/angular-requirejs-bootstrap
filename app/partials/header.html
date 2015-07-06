@@ -1,0 +1,30 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" id="main-navbar">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" ng-click="isMainNavbarCollapsed = !isMainNavbarCollapsed">
+                <span class="sr-only">导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#/">
+                <img src="/img/logo.png" alt="test" />
+                <span class="main-navbar-title">LOGO</span>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="main-navbar-collapse" collapse="!isMainNavbarCollapsed">
+            <ul class="nav navbar-nav" main-navbar>
+                <li class="active"><a href="#/title1">Title1</a>
+                </li>
+                <li><a href="#/title2">Title2</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="javascript:;" class="userpic"><img src="img/userpic.jpg" alt="" /><span class="username">username</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

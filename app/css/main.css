@@ -1,0 +1,220 @@
+@-ms-viewport {
+    width: device-width;
+}
+
+@-webkit-viewport {
+    width: device-width;
+}
+
+@-moz-viewport {
+    width: device-width;
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+
+@-o-viewport {
+    width: device-width;
+}
+
+@viewport {
+    width: device-width;
+}
+
+@media print {
+    .container {
+        width: auto;
+    }
+}
+
+.img-responsive {
+    width: auto \9;
+}
+
+.nav,
+.pagination,
+.carousel,
+.panel-title a {
+    cursor: pointer;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: '微软雅黑', '黑体';
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+/**************** bootstrap 覆盖重写 ****************/
+
+.form-control {
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    height: 32px;
+    padding: 4px;
+}
+
+.form-control,
+.form-control:focus {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.btn {
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    letter-spacing: 1px;
+}
+/**************** 自定义全局样式 ****************/
+
+form .text-danger {
+    font-size: 12px;
+}
+/*********** angular-ui-tree ***********/
+
+.angular-ui-tree {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    height: 100%;
+    padding-top: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: auto;
+}
+
+.angular-ui-tree-handle {
+    position: relative;
+    padding: 8px 10px;
+    background: #E6F0F5;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: default;
+    font-weight: normal;
+}
+
+.angular-ui-tree-node .angular-ui-tree-nodes .angular-ui-tree-handle {
+    background-color: transparent;
+    margin-bottom: 0;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    cursor: pointer;
+}
+
+.angular-ui-tree-nodes .angular-ui-tree-nodes {
+    padding-left: 0;
+}
+
+.angular-ui-tree-nodes .angular-ui-tree-nodes .angular-ui-tree-handle {
+    padding-left: 28px;
+}
+
+.angular-ui-tree-nodes .angular-ui-tree-nodes .angular-ui-tree-handle:hover {
+    background-color: #eee;
+}
+
+.angular-ui-tree-nodes .angular-ui-tree-nodes .angular-ui-tree-handle.active {
+    font-weight: bold;
+    background-color: #eee;
+}
+
+.angular-ui-tree-handle a {
+    color: inherit;
+    cursor: pointer;
+}
+
+.angular-ui-tree-set {
+    opacity: 0;
+    filter: Alpha(Opacity=0);
+}
+
+.angular-ui-tree-handle:hover .angular-ui-tree-set {
+    opacity: 1;
+    filter: Alpha(Opacity=100);
+}
+/*==================== header ====================*/
+
+#main-navbar {
+    height: 60px;
+    background-color: #333645;
+    border-color: #333645;
+}
+
+#main-navbar a {
+    height: 60px;
+    line-height: 56px;
+    padding: 0 20px;
+    color: #F0EFEF;
+    letter-spacing: 1px;
+}
+
+#main-navbar .active>a {
+    background-color: #3689b3;
+}
+
+#main-navbar-collapse {
+    background-color: #333645;
+}
+
+#main-navbar-collapse .userpic img {
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+}
+
+#main-navbar-collapse .username {
+    margin-left: 10px;
+}
+
+#main-navbar .navbar-brand {
+    font-size: 20px;
+}
+
+#main-navbar .navbar-brand img {
+    display: inline-block;
+}
+
+.main-navbar-title {}
+/*==================== main ====================*/
+
+.main-container {
+    position: relative;
+    padding-top: 60px;
+    min-height: 100%;
+    overflow-y: auto;
+}
+
+.left_slider {
+    width: 25%;
+    border-right: 2px solid #7F8084;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+    overflow: auto;
+}
+
+.left_slider_inner {
+    position: relative;
+    min-height: 100%;
+}
+
+.main_content {
+    position: absolute;
+    top: 60px;
+    left: 25%;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+}

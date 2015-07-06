@@ -1,0 +1,90 @@
+<link rel="stylesheet" href="views/title2/style.css" />
+
+<div class="left_slider">
+    <div class="left_slider_inner">
+        <div class="metadata_handle">
+            <div class="clearfix">
+                <button class="btn btn-primary btn-sm" ng-click="isAddGroup=!isAddGroup;isAddMetaData=false;isSearchMetaData=false">添加分组</button>
+                <button class="btn btn-primary btn-sm" ng-click="isAddMetaData=!isAddMetaData;isAddGroup=false;isSearchMetaData=false">添加新项目</button>
+
+            </div>
+            <!-- 添加分组 -->
+            <form name="addGroupForm" class="addGroupForm" ng-if="!!isAddGroup" novalidate ng-submit="saveGroup(addGroupForm.$valid)">
+                <div class="form-group" ng-class="{'has-error has-feedback':(!addGroupForm.groupName.$pristine && addGroupForm.groupName.$error.required)}">
+                    <label for="">名称：</label>
+                    <input type="text" class="form-control" ng-model="currentGroup.name" name="groupName" required>
+                    <span class="text-danger" ng-show="!addGroupForm.groupName.$pristine && addGroupForm.groupName.$error.required">名称不能为空！</span>
+                </div>
+                <div class="clearfix text-right">
+                    <button type="submit" class="btn btn-info btn-sm">保存</button>
+                    <button class="btn btn-warning btn-sm" ng-click="cancelGroup()">取消</button>
+                </div>
+            </form>
+            <!-- 添加新项目 -->
+            <form name="addMetaDataForm" class="addMetaDataForm" ng-if="!!isAddMetaData" novalidate>
+                <div class="form-horizontal">
+                    <div class="form-group" ng-class="{'has-error':addMetaDataForm.metaDataName.$dirty && addMetaDataForm.metaDataName.$error.required}">
+                        <label class="col-sm-3 control-label">名称：</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="metaDataName" class="form-control" ng-model="currentMetaData.name" required>
+                            <span class="text-danger" ng-show="addMetaDataForm.metaDataName.$dirty && addMetaDataForm.metaDataName.$error.required">名称不能为空！</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="col-sm-3 control-label">分组：</label>
+                        <div class="col-sm-9">
+                            <select class="form-control" name="metaDataGroupId" ng-model="currentMetaData.groupid" ng-options="group.id as group.name for group in groups">
+                                <option value="">default group</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix text-right">
+                    <button class="btn btn-info btn-sm" ng-click="saveMetaData(addMetaDataForm.$valid)">保存</button>
+                    <button class="btn btn-warning btn-sm" ng-click="cancelMetaData()">取消</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- 列表树 -->
+        <div ui-tree data-drag-enabled="false">
+            <!--<div ui-tree="options" data-drag-delay="300" data-max-depth="2">-->
+            <ol ui-tree-nodes ng-model="groups" data-collapsed="true">
+                <li ng-repeat="group in groups" ui-tree-node ng-include="'views/title2/groupTree.html'"></li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<div class="main_content">
+    <div class="field_handle clearfix">
+        <button type="button" class="btn btn-default pull-right" ng-click="newField()"><span class="fa fa-plus"></span>&nbsp;&nbsp;新建</button>
+    </div>
+    <div class="field_list">
+        <table class="table table-bordered table-condensed">
+            <thead>
+                <tr>
+                    <th>title1</th>
+                    <th>title2</th>
+                    <th>title3</th>
+                    <th>title4</th>
+                    <th>title5</th>
+                    <th class="text-center">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="field in fields">
+                    <td>{{field.title1}}</td>
+                    <td>{{field.title2}}</td>
+                    <td>{{field.title3}}</td>
+                    <td>{{field.title4}}</td>
+                    <td>{{field.title5}}</td>
+                    <td class="text-center">
+                        <a class="table_handle" href="javascript:;" ng-click="editField($index,field)"><span class="fa fa-edit"></span></a>
+                        <a class="table_handle" href="javascript:;" ng-click="editField($index,field)"><span class="fa fa-trash"></span></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

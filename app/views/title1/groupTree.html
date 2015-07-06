@@ -1,0 +1,16 @@
+<div ui-tree-handle>
+    <a ng-if="depth()<2" nodrag ng-click="searchSetByGroupId(this,group)">
+        <span class="fa" ng-class="{'fa-plus-square': !collapsed, 'fa-minus-square': collapsed}"></span>
+    </a>
+    {{group.name}}
+    <div ng-if="group.id != 1" class="pull-right">
+        <a class="angular-ui-tree-set" ng-if="depth()<2" href="javascript:;" ng-click="editGroup($index,group)"><span class="fa fa-edit"></span></a>
+        <a class="angular-ui-tree-set" ng-if="depth()>=2" href="javascript:;" ng-click="editSetData($index,group)"><span class="fa fa-edit"></span></a>
+        <a class="angular-ui-tree-set" ng-if="depth()<2" href="javascript:;" ng-click="removeGroup($index,group)"><span class="fa fa-trash"></span></a>
+        <a class="angular-ui-tree-set" ng-if="depth()>=2" href="javascript:;" ng-click="removeSetData($index,group,this)"><span class="fa fa-trash"></span></a>
+    </div>
+
+</div>
+<ol ui-tree-nodes ng-model="group.child" ng-class="{hidden: !collapsed}">
+    <li ng-repeat="group in group.child" ui-tree-node ng-include="'views/title1/groupTree.html'"></li>
+</ol>

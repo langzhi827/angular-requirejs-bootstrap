@@ -1,0 +1,31 @@
+{
+  "name": "angular-rquirejs-bootstrap",
+  "version": "0.0.1",
+  "description": "angular-rquirejs-bootstrap example",
+  "main": "main.js",
+  "keywords": [
+    "angular",
+    "rquirejs",
+    "bootstrap"
+  ],
+  "authors": [
+    "harry.lang"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.2",
+    "angular-bootstrap": "~0.11.2",
+    "angular-route": "~1.3.2",
+    "bootstrap": "~3.3.0",
+    "requirejs": "~2.1.15",
+    "angular-ui-tree": "~2.2.0",
+    "font-awesome": "FortAwesome/Font-Awesome#~4.3.0"
+  }
+}

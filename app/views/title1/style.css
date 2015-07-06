@@ -1,0 +1,29 @@
+/*********** 左侧栏style ***********/
+
+.setdata_handle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 19;
+    padding: 10px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #C5C1C1;
+}
+
+.addGroupForm {
+    padding: 20px;
+}
+
+.addSetDataForm {
+    padding: 20px 15px;
+}
+
+.searchSetDataForm {
+    padding: 20px;
+}
+/*********** 主体内容样式 ***********/
+
+.main_content {
+    padding: 15px;
+}

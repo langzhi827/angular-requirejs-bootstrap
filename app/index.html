@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="renderer" content="webkit">
+    <meta name="keywords" content="angular,rquirejs,bootstrap,bowser," />
+    <meta name="description" content="angular-rquirejs-bootstrap example" />
+    <title>angular-rquirejs-bootstrap example</title>
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <!-- bootstrap样式 -->
+    <link rel="stylesheet" href="vender/bootstrap/dist/css/bootstrap.min.css">
+    <!-- angular-ui-tree样式 -->
+    <link rel="stylesheet" href="vender/angular-ui-tree/dist/angular-ui-tree.min.css">
+    <!-- 图标库 -->
+    <link rel="stylesheet" href="vender/font-awesome/css/font-awesome.min.css">
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementsByTagName('body')[0].innerHTML = '<div class="alert alert-danger">您的浏览器版本太低了，赶紧升级吧，亲！！！！</div>';
+        }
+    </script>
+    <![endif]-->
+    <script>
+        if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+            var msViewportStyle = document.createElement('style')
+            msViewportStyle.appendChild(
+                document.createTextNode(
+                    '@-ms-viewport{width:auto!important}'
+                )
+            )
+            document.querySelector('head').appendChild(msViewportStyle)
+        }
+    </script>
+</head>
+
+<body>
+
+    <header ng-include="'partials/header.html'"></header>
+    <div class="main-container">
+        <div ng-cloak ng-view></div>
+    </div>
+
+    <script type="text/javascript" data-main="js/main.js" src="vender/requirejs/require.js"></script>
+
+</body>
+
+</html>
