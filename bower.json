@@ -1,11 +1,11 @@
 {
-  "name": "angular-rquirejs-bootstrap",
+  "name": "angular-requirejs-bootstrap",
   "version": "0.0.1",
-  "description": "angular-rquirejs-bootstrap example",
+  "description": "angular-requirejs-bootstrap example",
   "main": "main.js",
   "keywords": [
     "angular",
-    "rquirejs",
+    "requirejs",
     "bootstrap"
   ],
   "authors": [

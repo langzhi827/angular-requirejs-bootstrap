@@ -1,4 +1,4 @@
-# angular-rquirejs-bootstrap
+# angular-requirejs-bootstrap
 一个利用angularjs，requirejs以及bootstrap实现的前端实例。
 
 ## 目录结构
