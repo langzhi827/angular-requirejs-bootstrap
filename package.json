@@ -1,0 +1,28 @@
+{
+  "name": "angular-requirejs-bootstrap",
+  "version": "0.0.1",
+  "description": "angular-requirejs-bootstrap example",
+  "main": "http-server.js",
+  "scripts": {
+    "start": "node http-server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/langzhi827/angular-requirejs-bootstrap.git"
+  },
+  "keywords": [
+    "angular",
+    "requirejs"
+  ],
+  "author": "harry.lang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/langzhi827/angular-requirejs-bootstrap/issues"
+  },
+  "homepage": "https://github.com/langzhi827/angular-requirejs-bootstrap#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-requirejs": "^0.1.3"
+  }
+}
