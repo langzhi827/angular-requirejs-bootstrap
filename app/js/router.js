@@ -1,6 +1,6 @@
 define([
     'angular',
-    'js/routeResolve',
+    '../js/routeResolve',
     'angular-route'
 ], function (angular, routeResolve) {
 
