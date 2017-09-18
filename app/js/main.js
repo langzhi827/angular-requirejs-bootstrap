@@ -6,7 +6,7 @@ require.config({
         appjs: 'js/config/appjs',
 
         angular: 'vender/angular/angular.min',
-        'angular-route': 'vender/angular-route/angular-route.min',
+        'angular-ui-router': 'vender/angular-ui-router/release/angular-ui-router.min',
         'angular-tree': 'vender/angular-ui-tree/dist/angular-ui-tree.min',
 
         'bootstrap': 'vender/angular-bootstrap/ui-bootstrap.min'
@@ -16,7 +16,7 @@ require.config({
         angular: {
             exports: 'angular'
         },
-        'angular-route': ['angular'],
+        'angular-ui-router': ['angular'],
         'angular-tree': ['angular'],
         bootstrap: ['angular']
     }

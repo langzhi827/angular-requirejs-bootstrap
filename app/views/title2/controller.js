@@ -8,16 +8,16 @@ define([
     app.registerController('metaDataController', ['$scope', '$modal', 'metaDataService', '$http', function ($scope, $modal, metaDataService, $http) {
 
         /*
-                
+
             分组操作
 
         */
 
         //分组列表
         $scope.groups = [];
-        metaDataService.group.query().success(function (result) {
+        /*metaDataService.group.query().success(function (result) {
             $scope.groups = result;
-        });
+        });*/
         //默认当前分组
         $scope.currentGroup = {};
         //当前被编辑分组编号
@@ -71,7 +71,7 @@ define([
         };
 
         /*
-                    
+
             项目操作
 
         */
@@ -149,9 +149,9 @@ define([
         };
 
         /*
-        
+
             项目详情操作
-        
+
         */
         $scope.fieldModalData = {};
         $scope.fields = [];
@@ -195,9 +195,9 @@ define([
 
     }]);
     /*
-        
+
         创建弹窗控制器
-        
+
     */
     app.registerController('fieldModalCtrl', ['$scope', '$modalInstance', 'metaDataService', 'fieldModalData', function ($scope, $modalInstance, metaDataService, fieldModalData) {
 

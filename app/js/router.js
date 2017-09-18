@@ -1,27 +1,29 @@
 define([
     'angular',
     '../js/routeResolve',
-    'angular-route'
+    'angular-ui-router'
 ], function (angular, routeResolve) {
 
-    var module = angular.module('app.router', ['ngRoute']);
+    var module = angular.module('app.router', ['ui.router']);
 
-    module.config(['$routeProvider', function ($routeProvider) {
+    module.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
-        $routeProvider.when('/title1', {
-            templateUrl: 'views/title1/index.html',
+        $urlRouterProvider.when("", "/title1");
+
+        $stateProvider.state('title1', {
+            url: '/title1',
+            templateUrl: '/views/title1/index.html',
             controller: 'setDataController',
             resolve: routeResolve([
                 'views/title1/index'
             ])
-        }).when('/title2', {
-            templateUrl: 'views/title2/index.html',
+        }).state('title2', {
+            url: '/title2',
+            templateUrl: '/views/title2/index.html',
             controller: 'metaDataController',
             resolve: routeResolve([
                 'views/title2/index'
             ])
-        }).otherwise({
-            redirectTo: '/title1'
         });
 
     }]);
